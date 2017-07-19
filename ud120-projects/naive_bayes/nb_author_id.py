@@ -28,7 +28,18 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 #########################################################
 ### your code goes here ###
+clf = GaussianNB()
 
+start_time = time()
+fit = clf.fit(features_train,labels_train)
+delta_a = start_time -time()
+
+new_start_time = time()
+
+pred = clf.predict(features_test)
+delta_p = new_start_time - time()
+
+print("fit: ",delta_a, "predict: ", delta_p)
 
 
 
