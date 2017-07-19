@@ -40,6 +40,8 @@ pred = clf.predict(features_test)
 delta_p = new_start_time - time()
 
 print("fit: ",delta_a, "predict: ", delta_p)
+accuracy = accuracy_score(labels_test, pred)
+print("accuracy, ", accuracy)
 
 
 
